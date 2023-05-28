@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% trans "App name" %}{% endblock title %}
+{% block header %}
+
+{% endblock header %}
+{% block content %}
+	<div class="jumbotron">
+		<div class="row justify-content-center">
+			<h1>Безопасность и охрана труда</h1>
+			<hr>
+			<p>Для достижения стратегической цели ERG – снижения травматизма и аварий на производстве до нуля на всех предприятиях Группы, мы продолжаем трансформацию нашей бизнес-модели, совершенствуем действующую систему управления охраной труда и промышленной безопасности. Мы шаг за шагом продвигаемся в создании высокой культуры безопасности труда, основополагающими принципами которой является приверженность и лидерство руководителей всех уровней управления, осознанное и честное отношение к вопросам безопасности каждого работника</p>
+			<hr>
+			<div class="card">
+				<div class="card-header">
+						<h3>Здоровая среда</h3>
+				</div>
+				<div class="card-body">					
+					<div class="row">
+						<div class="col-md-2">
+							<img src="{% static 'images/index1.svg' %}" alt="logo" style="width:100%; max-width:400px; padding: 5px;">
+						</div>								
+						<div class="col-md-10">
+							<p>Мы неукоснительно стремимся к тому, чтобы создать нашим сотрудникам безопасную и здоровую производственную среду.</p>
+						</div>														
+					</div>								
+				</div>								
+			</div>	
+			<hr>
+			<div class="card">
+				<div class="card-header">
+						<h3>Безопасность</h3>
+				</div>
+				<div class="card-body">					
+					<div class="row">
+						<div class="col-md-2">
+							<img src="{% static 'images/index2.svg' %}" alt="logo" style="width:100%; max-width:400px; padding: 5px;">
+						</div>								
+						<div class="col-md-10">
+							<p>Мы намерены продолжить развитие культуры безопасности, уделяя особое внимание изменению личного отношения к обеспечению безопасности среди наших сотрудников.</p>
+						</div>								
+					</div>								
+				</div>								
+			</div>	
+			<hr>
+			<div class="card">
+				<div class="card-header">
+						<h3>Охрана труда</h3>
+				</div>
+				<div class="card-body">					
+					<div class="row">
+						<div class="col-md-2">
+							<img src="{% static 'images/index3.svg' %}" alt="logo" style="width:100%; max-width:400px; padding: 5px;">
+						</div>								
+						<div class="col-md-10">
+							<p>Мы уделяем повышенное внимание снижению рисков и совершенствованию методов управления охраной труда.</p>
+						</div>				
+					</div>								
+				</div>								
+			</div>								
+		</div>
+	</div>
+{% endblock content %}
