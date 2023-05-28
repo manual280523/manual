@@ -2,13 +2,13 @@
 :root {	
 	/* Основные цвета */
 	--navbar-background-color: Bisque;
-	--main-background-color-light: Beige;
+	--main-background-color-light: White;
 	--main-background-color-dark: Bisque;
 	--main-text-color: DarkGreen;
 	--main-header-color: Brown;
 	--main-text-attention-color: SpringGreen;
-	--footer-background-color-light: Yellow;
-	--footer-background-color-dark: Blue;
+	--footer-background-color-light: Beige;
+	--footer-background-color-dark: Green;
 	--footer-text-color: White;
 	--card-background-color-light: Beige;
 	--card-background-color-dark: Bisque;
