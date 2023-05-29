@@ -35,7 +35,7 @@ def new_tetstask(apps, schema_editor):
 
     category = Category()
     category.id = 1
-    category.title = 'Основы Информационной безопасности'   
+    category.title = 'Техника безопасности'   
     category.save()
     print("Категории созданы")
 
