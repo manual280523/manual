@@ -1,0 +1,224 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% block title %}{% endblock title %}
+{% block header %}{% endblock header %} 
+{% block content %}
+<h1 align="center">{% trans "tasks" %}</h1>
+<div class="row">
+	<ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
+		<li class="nav-item" role="presentation">
+			<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">
+				1
+			</button>
+		</li>
+		<li class="nav-item" role="presentation">
+			<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">
+				2
+			</button>
+		</li>			
+		<li class="nav-item" role="presentation">
+			<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#tab3" type="button" role="tab" aria-controls="tab3" aria-selected="false">
+				3
+			</button>
+		</li>		
+		<li class="nav-item" role="presentation">
+			<button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#tab4" type="button" role="tab" aria-controls="tab4" aria-selected="true">
+				4
+			</button>
+		</li>
+		<li class="nav-item" role="presentation">
+			<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#tab5" type="button" role="tab" aria-controls="tab5" aria-selected="false">
+				5
+			</button>
+		</li>			
+		<li class="nav-item" role="presentation">
+			<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#tab6" type="button" role="tab" aria-controls="tab6" aria-selected="false">
+				6
+			</button>
+		</li>				
+		<li class="nav-item" role="presentation">
+			<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#tab7" type="button" role="tab" aria-controls="tab7" aria-selected="false">
+				7
+			</button>
+		</li>		
+		<li class="nav-item" role="presentation">
+			<button class="nav-link" id="home-tab" data-bs-toggle="tab" data-bs-target="#tab8" type="button" role="tab" aria-controls="tab8" aria-selected="true">
+				8
+			</button>
+		</li>
+		<li class="nav-item" role="presentation">
+			<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#tab9" type="button" role="tab" aria-controls="tab9" aria-selected="false">
+				9
+			</button>
+		</li>			
+		<li class="nav-item" role="presentation">
+			<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#tab10" type="button" role="tab" aria-controls="tab6" aria-selected="false">
+				10
+			</button>
+		</li>				
+	</ul>
+	<div class="tab-content" id="myTabContent">
+		<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="home-tab">
+			<h3>№1</h3>
+			<p>Электромонтеры по ремонту и обслуживанию электрооборудования Шоков А. И. и Иванов С. А. производили расчистку трассы высоковольтной линии от деревьев. Произошел обрыв токоведущего провода, в результате чего Шоков А. И. был поражен электрическим током. Приняв меры предосторожности, Иванов С. А. вытянул пострадавшего из опасной зоны. При осмотре пострадавшего он выявил открытый перелом правой голени, ожог 3 степени правого предплечья</p>
+			<p><strong>Как называется опасная зона, в которой находился пострадавший? Какие меры предосторожности необходимо было предпринять Иванову С. А.? Какую помощь необходимо оказать пострадавшему работнику?</strong></p>
+			<form name="form1" id="form1"	method="post">
+				{% csrf_token %}
+				<div align="center">
+					<h4>Введите свой ответ:</h4>	
+					<textarea name="decision1" id="decision1" cols="100" rows="10"></textarea>
+				</div>	
+				<br>
+				<div align="center">
+					<button type="submit" onclick="return confirm('Отправить решение?')" class="btn btn-outline-success" style="width:100px">{% trans "Apply" %}</button>
+				</div>				
+			</form>			
+		</div>
+		<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="profile-tab">
+			<h3>№2</h3>
+			<p>На строительной площадке, при производстве погрузочно-разгрузочных работ, каменщик Алиев, не имея удостоверения стропальщика начал подавать сигналы крановщице для перемещения груза. Во время перемещения он находился под грузом. Груз упал ему на ногу. Алиев получил увечье, которое повлекло за собой временную утрату  трудоспособности менее 60 дней.</p>
+			<p><strong>Какие нарушения были допущены? Как  какой категории относится вышеуказанный несчастный случай? Каков порядок расследования данного несчастного случая?</strong></p>
+			<form name="form2" id="form2"	method="post">
+				{% csrf_token %}
+				<div align="center">
+					<h4>Введите свой ответ:</h4>	
+					<textarea name="decision2" id="decision2" cols="100" rows="10"></textarea>
+				</div>	
+				<br>
+				<div align="center">
+					<button type="submit" onclick="return confirm('Отправить решение?')" class="btn btn-outline-success" style="width:100px">{% trans "Apply" %}</button>
+				</div>				
+			</form>							
+		</div>
+		<div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="profile-tab">
+			<h3>№3</h3>
+			<p>Гражданка Нечаева Наталья Ивановна (28.10.1970 г) пришла устраиваться на работу сторожем в ООО «Импульс».</p>
+			<p><strong>Какие виды инструктажей необходимо  провести Нечаевой? Каков допуск к самостоятельной работе? Зарегистрируйте инструктажи в соответствующих журналах (дата проведения инструктажа текущая).</strong></p>
+			<form name="form3" id="form3"	method="post">
+				{% csrf_token %}
+				<div align="center">
+					<h4>Введите свой ответ:</h4>	
+					<textarea name="decision3" id="decision3" cols="100" rows="10"></textarea>
+				</div>	
+				<br>
+				<div align="center">
+					<button type="submit" onclick="return confirm('Отправить решение?')" class="btn btn-outline-success" style="width:100px">{% trans "Apply" %}</button>
+				</div>				
+			</form>			
+		</div>	
+		<div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="profile-tab">
+			<h3>№4</h3>
+			<p>Токарь Агеев А. А., вернувшись после очередного отпуска на свое рабочее место, обнаружил, что заземление на станке отсутствует, а диэлектрический коврик куда-то пропал. Об этом он доложил мастеру и сказал, что на станке работать не будет, так как это опасно для жизни. В ответ мастер потребовал, чтобы Агеев все-таки проработал на станке до конца смены (иначе будет сорвано производственное задание), и пообещал привлечь его к дисциплинарной ответственности в случае, если тот откажется. </p>
+			<p><strong>Правомерно ли требование мастера? Какие существуют гарантии права работника на труд в условиях, соответствующих требованиям охраны труда? Дайте развернутые ответы на поставленные вопросы.</strong></p>
+			<form name="form4" id="form4"	method="post">
+				{% csrf_token %}
+				<div align="center">
+					<h4>Введите свой ответ:</h4>	
+					<textarea name="decision4" id="decision4" cols="100" rows="10"></textarea>
+				</div>	
+				<br>
+				<div align="center">
+					<button type="submit" onclick="return confirm('Отправить решение?')" class="btn btn-outline-success" style="width:100px">{% trans "Apply" %}</button>
+				</div>				
+			</form>			
+		</div>	
+		<div class="tab-pane fade" id="tab5" role="tabpanel" aria-labelledby="profile-tab">
+			<h3>№5</h3>
+			<p>Разнорабочему Кореневу Н. И. выдали задание на производство работ (необходимо было просверлить отверстия,  на высоте 3 метра, для прокладки кабеля в подвальном помещении недостроенного дома). В данном помещении относительная влажность воздуха более 75%, температура +35С, земляной пол.</p>
+			<p><strong>Какие меры безопасности необходимо соблюдать при производстве данных работ? Дайте развернутый ответ на вопрос.</strong></p>
+			<form name="form5" id="form5"	method="post">
+				{% csrf_token %}
+				<div align="center">
+					<h4>Введите свой ответ:</h4>	
+					<textarea name="decision5" id="decision5" cols="100" rows="10"></textarea>
+				</div>	
+				<br>
+				<div align="center">
+					<button type="submit" onclick="return confirm('Отправить решение?')" class="btn btn-outline-success" style="width:100px">{% trans "Apply" %}</button>
+				</div>				
+			</form>			
+		</div>	
+		<div class="tab-pane fade" id="tab6" role="tabpanel" aria-labelledby="profile-tab">
+			<h3>№6</h3>
+			<p>При погрузочно-разгрузочных работах каменщик Шульгин А. В. неоднократно нарушал требования охраны труда, за что не раз привлекался к ответственности. Прораб  Иванов П. И. решил провести Шульгину А. В. инструктаж по безопасности труда.</p>
+			<p><strong>К какому виду ответственности привлекался работник? Какие наказания соответствуют данному виду ответственности? Какой инструктаж должен провести прораб вышеуказанному работнику? Зарегистрируйте его в журнале регистрации инструктажей (дата проведения инструктажа текущая).</strong></p>
+			<form name="form6" id="form6"	method="post">
+				{% csrf_token %}
+				<div align="center">
+					<h4>Введите свой ответ:</h4>	
+					<textarea name="decision6" id="decision6" cols="100" rows="10"></textarea>
+				</div>	
+				<br>
+				<div align="center">
+					<button type="submit" onclick="return confirm('Отправить решение?')" class="btn btn-outline-success" style="width:100px">{% trans "Apply" %}</button>
+				</div>				
+			</form>			
+		</div>	
+		<div class="tab-pane fade" id="tab7" role="tabpanel" aria-labelledby="profile-tab">
+			<h3>№7</h3>
+			<p>Студенты «ГГПК» Иванов Николай Иванович (28.01.1996 г) и Петров Сергей Иванович (14.01.1996г), обучающиеся по профессии электрогазосварщик, после удачной сдачи зимней сессии, прибыли на производственную практику в дочернюю организацию ОАО «ЛГОК» ООО «Рудстрой». Им были проведены необходимые инструктажи. Выдана соответствующая спецодежда. Практиканты приступили к работе. </p>
+			<p><strong>Какие виды инструктажей были проведены студентам? Зарегистрируйте в соответствующих журналах. Какие ошибки  допущены при допуске студентов к работе с опасными и вредными производственными факторами?</strong></p>
+			<form name="form7" id="form7"	method="post">
+				{% csrf_token %}
+				<div align="center">
+					<h4>Введите свой ответ:</h4>	
+					<textarea name="decision7" id="decision7" cols="100" rows="10"></textarea>
+				</div>	
+				<br>
+				<div align="center">
+					<button type="submit" onclick="return confirm('Отправить решение?')" class="btn btn-outline-success" style="width:100px">{% trans "Apply" %}</button>
+				</div>				
+			</form>		
+		</div>	
+		<div class="tab-pane fade" id="tab8" role="tabpanel" aria-labelledby="profile-tab">
+			<h3>№8</h3>
+			<p>Электромонтер по ремонту и обслуживанию электрооборудования Козлов А. И., после окончания колледжа устроился на работу, где проходил производственную практику. </p>
+			<p><strong>Какие виды инструктажей необходимо ему провести? Зарегистрируйте в соответствующих журналах? Каков порядок допуска к самостоятельной работе?</strong></p>
+			<form name="form8" id="form8"	method="post">
+				{% csrf_token %}
+				<div align="center">
+					<h4>Введите свой ответ:</h4>	
+					<textarea name="decision8" id="decision8" cols="100" rows="10"></textarea>
+				</div>	
+				<br>
+				<div align="center">
+					<button type="submit" onclick="return confirm('Отправить решение?')" class="btn btn-outline-success" style="width:100px">{% trans "Apply" %}</button>
+				</div>				
+			</form>			
+		</div>	
+		<div class="tab-pane fade" id="tab9" role="tabpanel" aria-labelledby="profile-tab">
+			<h3>№9</h3>
+			<p>Помощник машиниста экскаватора Николаев Сергей Васильевич ушел в отпуск 22.01.2014г. Срок сдачи экзамена по электробезопасности работника 24.01.2014г. он пропустил.</p>
+			<p><strong>Какой вид инструктажа необходимо провести работнику по выходу из отпуска? Зарегистрируйте в соответствующих журналах. Какие действия по отношению к работнику должен предпринять непосредственный руководитель работ?</strong></p>
+			<form name="form9" id="form9"	method="post">
+				{% csrf_token %}
+				<div align="center">
+					<h4>Введите свой ответ:</h4>	
+					<textarea name="decision9" id="decision9" cols="100" rows="10"></textarea>
+				</div>	
+				<br>
+				<div align="center">
+					<button type="submit" onclick="return confirm('Отправить решение?')" class="btn btn-outline-success" style="width:100px">{% trans "Apply" %}</button>
+				</div>				
+			</form>		
+		</div>	
+		<div class="tab-pane fade" id="tab10" role="tabpanel" aria-labelledby="profile-tab">
+			<h3>№10</h3>
+			<p>При проведении огневых работ на строительной площадке, электрогазосварщик Исаев И. И. неоднократно допускал нарушения трудовой дисциплины, за что не раз привлекался к ответственности. Прораб  Иванов П. И. решил провести Исаеву И. И. инструктажи по безопасности труда.</p>
+			<p><strong>К какому виду ответственности привлекался работник? Какие наказания соответствуют данному виду ответственности? Какие виды инструктажей должен провести прораб вышеуказанному работнику? Зарегистрируйте их в журналах регистрации инструктажей (дата проведения инструктажа текущая).</strong></p>
+			<form name="form10" id="form10"	method="post">
+				{% csrf_token %}
+				<div align="center">
+					<h4>Введите свой ответ:</h4>	
+					<textarea name="decision10" id="decision10" cols="100" rows="10"></textarea>
+				</div>	
+				<br>
+				<div align="center">
+					<button type="submit" onclick="return confirm('Отправить решение?')" class="btn btn-outline-success" style="width:100px">{% trans "Apply" %}</button>
+				</div>				
+			</form>			
+		</div>		
+	</div>
+</div>
+{% endblock content %}

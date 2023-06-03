@@ -59,10 +59,10 @@
 									<a class="dropdown-item" href="{% url 'category_index' %}">{% trans "category" %}</a>
 									<a class="dropdown-item" href="{% url 'teststask_index' %}">{% trans "teststask" %}</a>
 									<a class="dropdown-item" href="{% url 'protocol_index' %}">{% trans "protocols" %}</a>
-									<!--<a class="dropdown-item" href="{% url 'decision_index' %}">{% trans "decisions" %}</a>-->
+									<a class="dropdown-item" href="{% url 'decision_index' %}">{% trans "decisions" %}</a>
 								{% else %}
 									<a class="dropdown-item" href="{% url 'teststask_list' %}">{% trans "run test" %}</a>
-									<!-- <a class="dropdown-item" href="{% url 'tasks' %}">{% trans "tasks" %}</a> -->
+									<a class="dropdown-item" href="{% url 'tasks' %}">{% trans "tasks" %}</a>
 									<a class="dropdown-item" href="{% url 'protocol_list' %}">{% trans "protocols" %}</a>
 								{% endif %}
 								<div class="dropdown-divider"></div>

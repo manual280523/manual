@@ -18,7 +18,7 @@ def new_tetstask(apps, schema_editor):
     my_group.user_set.add(user)
     print("Менеджер создан")
 
-    # Простые пользователи (заявители) id3-27
+    # Простые пользователи (заявители) id3-12
     user = User.objects.create_user(username='user1', password='Uu0066+-', email='user1@mail.ru', first_name='Асхат', last_name='Бекназар', last_login=datetime.now())
     user = User.objects.create_user(username='user2', password='Uu0066+-', email='user2@mail.ru', first_name='Владислав', last_name='Канавец', last_login=datetime.now())
     user = User.objects.create_user(username='user3', password='Uu0066+-', email='user3@mail.ru', first_name='Шадияр', last_name='Иманов', last_login=datetime.now())
@@ -604,8 +604,44 @@ def new_tetstask(apps, schema_editor):
     protocol.datep = datetime.now() - timedelta(days=6);
     protocol.save()
 
-    print("Пртокол создан")
+    print("Протокол создан")
    
+    # Протокол
+    
+    Decision = apps.get_model("guide", "Decision")
+
+    decision = Decision()
+    #decision.dated = datetime.now() - timedelta(days=10);
+    decision.user_id = 3
+    decision.title = 'Задача №1'
+    decision.solution = 'Вызовите скорую медицинскую помощь (тел. 03). Наложите стерильную повязку на место электротравмы. Откройте все окна и форточки (пострадавшему нужен свежий воздух) Согрейте пострадавшего - накройте его пледом или одеждой.'
+    decision.rating = 'Ответ неполный'
+    decision.save()
+    decision.dated = datetime.now() - timedelta(days=10);
+    decision.save()
+
+    decision = Decision()
+    #decision.dated = datetime.now() - timedelta(days=259
+    decision.user_id = 4
+    decision.title = 'Задача №2'
+    decision.solution = 'Нарушение техники безопасности'
+    decision.rating = 'Ответ неполный'
+    decision.save()
+    decision.dated = datetime.now() - timedelta(days=9);
+    decision.save()
+
+    decision = Decision()
+    #decision.dated = datetime.now() - timedelta(days=8);
+    decision.user_id = 5
+    decision.title = 'Задача №3'
+    decision.solution = 'Для всех новых работников, в том числе временных, проводят вводный и первичный противопожарные инструктажи: вводный — до начала выполнения трудовой функции, первичный — непосредственно на рабочем месте в первый трудовой день.'
+    decision.rating = 'Хорошо'
+    decision.save()
+    decision.dated = datetime.now() - timedelta(days=8);
+    decision.save()
+
+    print("Ответы на задачи созданы")
+
 class Migration(migrations.Migration):
 
     dependencies = [
