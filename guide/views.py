@@ -318,8 +318,8 @@ def teststask_run(request, id):
             # Записать результат и перейти на страницу с протоколом выполнения
             protocol = Protocol()
             protocol.teststask_id = id
-            protocol.result = (answered_correctly/all_questions)*100
-            protocol.details = _('Total Questions')+ ': ' + str(all_questions) + '. ' + _('Total replied') + ': ' + str(total_answered) + '. ' + _('Correctly answered') + ': ' + str(answered_correctly) + ', (' + str((answered_correctly/all_questions)*100) + ' %). ' + res
+            protocol.result = round((answered_correctly/all_questions)*100,1)
+            protocol.details = _('Total Questions')+ ': ' + str(all_questions) + '. ' + _('Total replied') + ': ' + str(total_answered) + '. ' + _('Correctly answered') + ': ' + str(answered_correctly) + ', (' + str(protocol.result) + ' %). ' + res
             protocol.user_id = request.user.id
             protocol.save()
             return HttpResponseRedirect(reverse('protocol_list'))
